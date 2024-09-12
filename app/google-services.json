@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "919720209742",
+    "project_id": "ultimate-fetch",
+    "storage_bucket": "ultimate-fetch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919720209742:android:384514e7ed7a7c2253821f",
+        "android_client_info": {
+          "package_name": "com.example.quickdroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919720209742-mf6q68g33avde6iqeas8ms30epkrtkms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4K9hmabVcOYTnYahIrQsPQqbiT5Rd5VY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919720209742-mf6q68g33avde6iqeas8ms30epkrtkms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="7dp"
+    android:layout_marginVertical="5dp"
+    android:elevation="15dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="20dp"
+    app:strokeColor="#4680A0"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name_of_file"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="15dp"
+            android:background="@color/colorGrey"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/number_id"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/number_id"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/share_background_shimmer"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/file_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="15dp"
+            android:background="@color/colorGrey"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toStartOf="@id/share_file"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_of_file"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/share_file"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/share_background_shimmer"
+            android:padding="5dp"
+            app:layout_constraintBottom_toTopOf="@id/date_added"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/number_id" />
+
+        <TextView
+            android:id="@+id/date_added"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="15dp"
+            android:background="@color/colorGrey"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:textColor="#108415"
+            app:layout_constraintEnd_toStartOf="@id/whatsapp_share"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/file_type"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/whatsapp_share"
+            android:layout_width="40dp"
+            android:layout_height="39dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/share_background_shimmer"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/share_file" />
+
+
+        <TextView
+            android:id="@+id/time_ago"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="15dp"
+            android:background="@color/colorGrey"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@id/instagram_share"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_added"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/instagram_share"
+            android:layout_width="40dp"
+            android:layout_height="39dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/share_background_shimmer"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whatsapp_share" />
+
+        <TextView
+            android:id="@+id/file_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="15dp"
+            android:background="@color/colorGrey"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:textColor="#EB1818"
+            app:layout_constraintEnd_toStartOf="@id/telegram_share"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time_ago"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/telegram_share"
+            android:layout_width="40dp"
+            android:layout_height="39dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/share_background_shimmer"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instagram_share" />
+
+        <Button
+            android:id="@+id/download_link"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="@color/colorGrey"
+            android:elevation="15dp"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="@string/download_your_file"
+            android:textColor="@color/colorGrey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/file_size" />
+
+        <Button
+            android:id="@+id/save_your_file"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="@color/colorGrey"
+            android:elevation="15dp"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="@string/save_your_file"
+            android:textColor="@color/colorGrey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/file_size" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

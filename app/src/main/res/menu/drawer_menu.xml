@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/outline_home_24"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/nav_share_app"
+        android:icon="@drawable/outline_share_24"
+        android:title="@string/share_app" />
+
+    <item
+        android:id="@+id/nav_search_web"
+        android:icon="@drawable/outline_manage_search_24"
+        android:title="@string/search_on_web" />
+
+    <item
+        android:id="@+id/go_to_saved_file"
+        android:icon="@drawable/saved_file"
+        android:title="@string/see_saved_files" />
+
+    <item
+        android:id="@+id/go_to_history"
+        android:icon="@drawable/history_icon"
+        android:title="@string/history"
+        app:showAsAction="always" />
+
+</menu>

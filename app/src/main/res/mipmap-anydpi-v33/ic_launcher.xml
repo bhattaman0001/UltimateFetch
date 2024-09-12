@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
-    <background android:drawable="@drawable/logo_for_movie_magnet_application" />
-    <foreground android:drawable="@drawable/logo_for_movie_magnet_application" />
-    <monochrome android:drawable="@drawable/logo_for_movie_magnet_application" />
-</adaptive-icon>

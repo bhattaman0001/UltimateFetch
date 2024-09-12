@@ -1,14 +1,47 @@
 <resources>
-    <string name="app_name">MovieMagnet</string>
+    <string name="app_name">QuickDroid</string>
 
     <string-array name="spinner_options">
+        <item>Select file type</item>
         <item>Video</item>
         <item>E-books</item>
+        <item>Pdf</item>
         <item>Audio</item>
-        <item>Mobile Apps</item>
+        <item>Apks</item>
         <item>Archives</item>
     </string-array>
 
-    <string name="spinner_prompt">Type of query</string>
+    <string name="home">Home</string>
+    <string name="share_app">Share App</string>
+    <string name="search_on_web">Search on Web</string>
+    <string name="enter_your_query">Enter your file name</string>
+    <string name="find_your_file">Find your File</string>
+    <string name="download_your_file">Download Your File</string>
+    <string name="save_your_file">Save Your File</string>
+    <string name="delete_your_file">Delete</string>
+    <string name="size_of_file">Size of File</string>
+    <string name="time_ago">Time ago</string>
+    <string name="date_added">Date Added</string>
+    <string name="file_type">File Type</string>
+    <string name="name_of_your_file">Name of your file</string>
+    <string name="text">This application is designed to download any type of file like Video, Anime, Audio, E-Books, Games, ZIP.</string>
+    <string name="go_to_home">Go To Home</string>
+    <string name="see_saved_files">See Saved Files</string>
+    <string name="cancel">Cancel</string>
+    <string name="_1">1</string>
+    <string name="response_time">Response Time</string>
+    <string name="total_number_of_results">Total number of results</string>
+    <string name="no_saved_file">No Saved File</string>
+    <string name="no_history">No History</string>
+    <string name="no_downloaded_video">No Downloaded Video</string>
+    <string name="delete_saved_files">Clear</string>
+    <string name="history">History</string>
+    <string name="history_type">History Type</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="show_downloaded_media">Show Downloaded Media</string>
+    <string name="demo_code_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eleifend sem nec lacus iaculis, in scelerisque odio rutrum. Vivamus vulputate augue ac dolor rutrum, nec cursus erat pulvinar.</string>
+    <string name="demo_code_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eleifend sem nec lacus iaculis, in scelerisque odio rutrum.</string>
+    <string name="search">Search</string>
 
 </resources>

@@ -1,25 +1,39 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+
+    // Make sure that you have the Google services Gradle plugin
+    id("com.google.gms.google-services")
+
+    // Add the Crashlytics Gradle plugin
+    id("com.google.firebase.crashlytics")
 }
 
 android {
-    namespace 'com.example.moviemagnet'
+    namespace 'com.example.quickdroid'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.moviemagnet"
+        applicationId "com.example.quickdroid"
         minSdk 24
-        targetSdk 33
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("local.properties").newDataInputStream())
+        buildConfigField "String", "header1FP", "\"${properties.getProperty("header1FP")}\""
+        buildConfigField "String", "header2FP", "\"${properties.getProperty("header2FP")}\""
+        buildConfigField "String", "header1EB", "\"${properties.getProperty("header1EB")}\""
+        buildConfigField "String", "header2EB", "\"${properties.getProperty("header2EB")}\""
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -30,15 +44,93 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled true
+    }
+    dataBinding {
+        enabled true
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+    dexOptions {
+        incremental true
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.0'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:2.6.1"
+
+    //fragment
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+
+    // Room
+    implementation 'androidx.room:room-runtime:2.5.2'
+    annotationProcessor "androidx.room:room-compiler:2.5.2"
+    kapt 'androidx.room:room-compiler:2.5.2'
+    // Room ktx
+    implementation "androidx.room:room-ktx:2.5.2"
+
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+
+    // viewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+
+    // okHTTP logging
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+
+    // coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    // Other dependencies
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    // add the Firebase SDK for Google Analytics
+    // The app need this to init in Firebase console
+    implementation 'com.google.firebase:firebase-analytics:21.3.0'
+
+    // Add the Firebase SDK for Crashlytics.
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.7'
+
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:32.1.1"))
+
+    // Add the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-crashlytics-ktx")
+    implementation("com.google.firebase:firebase-analytics-ktx")
+
+    // shimmer effect
+    implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
+
+    // khttp
+    implementation "com.github.jkcclemens:khttp:0.1.0"
+
+    // Pluto
+    debugImplementation 'com.plutolib.plugins:bundle-core:2.1.3'
+    debugImplementation 'com.plutolib:pluto:2.1.3'
+    releaseImplementation 'com.plutolib.plugins:bundle-core-no-op:2.1.3'
+    releaseImplementation 'com.plutolib:pluto-no-op:2.1.3'
 }
